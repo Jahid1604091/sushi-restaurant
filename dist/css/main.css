@@ -1,0 +1,356 @@
+/* ******************* */
+/* global section */
+/* ******************* */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.primary-color {
+  color: #d3325f;
+}
+
+body {
+  /* font-family: 'Titillium Web', sans-serif; */
+  font-family: 'Berkshire Swash', cursive;
+  color: #c9c1ac;
+  background: url('../img/bg.jpg') center/cover fixed no-repeat;
+}
+
+/* ******************* */
+/* top section */
+/* ******************* */
+.info {
+  background: #c9c1ac;
+  /* height: 70px; */
+}
+.info h2 {
+  word-spacing: 0.6rem;
+}
+.info a {
+  /* transition: color 1s ease-in-out .5s; */
+  transition: color 1s ease-in-out;
+}
+.info a:hover {
+  color: #242424;
+}
+
+/* ******************* */
+/* header section */
+/* ******************* */
+
+#header {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 0, 0, 0.5)),
+    url('../img/restaurant-header.jpeg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.banner h1 {
+  font-family: 'Berkshire Swash', cursive;
+  border-top: 6px dotted;
+  border-bottom: 6px dotted;
+  animation: fromLeft;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+
+@keyframes fromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.main-btn {
+  border: 2px solid #d3325f;
+  font-size: 2rem;
+  
+}
+
+.sushi-btn {
+  animation: fromRight;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.height-90 {
+  min-height: calc(100vh - 70px);
+}
+
+.header-link {
+  position: absolute;
+  display: inline-block;
+  bottom: 5%;
+  left: 50%;
+
+  text-align: center;
+  /* right: 50%; */
+  transition: all 1s ease;
+  animation: fromBottom;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* ******************* */
+/* special item section */
+/* ******************* */
+
+.item-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+  transition: all 2s ease;
+}
+
+.item-img {
+  transition: all 2s ease;
+  width: 600px;
+  height: 200px;
+}
+.item-container:hover .item-img {
+  transform: scale(1.2);
+  opacity: 0.3;
+  cursor: pointer;
+}
+.item-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d3325f;
+  font-size: 2rem;
+  border-bottom: #c9c1ac 2px solid;
+  transition: all 2s ease;
+  opacity: 0;
+}
+.item-container:hover .item-link {
+  border: 2px solid #c9c1ac;
+  opacity: 1;
+}
+.item-container:hover {
+  outline: #d3325f 10px solid;
+  outline-offset: -0.5rem;
+}
+
+
+/* ******************* */
+/* navbar  */
+/* ******************* */
+
+.navbar{
+    background: #c9c1ac;
+    padding: 20px 20px;
+    transition: all 1s ease;
+}
+.navbar-background{
+   
+    padding: 5px 20px;
+   
+}
+.navbar-brand{
+    transition: all 1s ease;
+    font-size: 30px;
+   
+}
+.navbar-brand:hover{
+   color: #242424;
+   
+}
+.nav-link{
+    color: #242424;
+    text-decoration: none;
+    transition: all 2s ease;
+    font-size: 23px;
+}
+.nav-link:hover{
+    color: #d3325f;
+  
+}
+.nav-btn{
+  background: transparent;
+  color: #d3325f;
+  border: 2px solid #d3325f;
+  font-size: 23px;
+  transition: all 2s ease;
+}
+.nav-btn:hover{
+    color: #242424;
+    border: 2px solid #242424;
+    transform: rotate(10deg);
+}
+.toggler-btn{
+    border: 2px solid #d3325f;
+    padding: 5px;
+    transition: all 2s ease;
+}
+.bar{
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    background: #d3325f;
+    transition: all .54s ease;
+}
+.change .bar1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.change .bar2{
+    opacity: 0;
+}
+.change .bar3{
+    transform: rotate(45deg) translate(-5px,-8px);
+}
+
+
+/* ******************* */
+/* menu section */
+/* ******************* */
+
+#menu {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(../img/menu-bg.jpg) center/cover fixed none;
+}
+.special{
+    border: 3px solid #d3325f;
+    position: relative;
+}
+
+.special-text{
+    position: absolute;
+    top: 0;
+    right: 10%;
+    background: #d3325f;
+    padding: 0 0.4rem;
+}
+
+/* ******************* */
+/* about section */
+/* ******************* */
+
+.about-pictures{
+    position: relative;
+}
+.about-image{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    transition: all 2s ease;
+    opacity: 0.9;
+}
+.img-1{
+    left: 0%;
+    top: 0%;
+}
+.img-2{
+    left: 20%;
+    top: 15%;
+    z-index: 20;
+}
+.img-3{
+    left: 40%;
+    top: 30%;
+    z-index: 30;
+}
+.img-4{
+    left: 40%;
+    top: 0%;
+   
+}
+.img-5{
+    left: 0%;
+    top: 30%;
+    
+}
+
+.about-image:hover{
+    outline: 10px solid #d3325f;
+    outline-offset: 0.8rem;
+    transform: scale(1.3) rotate(20deg);
+    z-index: inherit;
+    opacity: 1;
+}
+
+/* ******************* */
+/* contact section */
+/* ******************* */
+
+.height-60{
+    min-height: 60vh;
+}
+#contact .card{
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 2s ease;
+}
+#contact .card-header{
+    color: #d3325f;
+}
+#contact .card:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#contact .input-group-text{
+    background: #d3325f;
+    border-color: #d3325f;
+    color: #242424;
+    width: 70px;
+}
+
+/* ******************* */
+/* footer section */
+/* ******************* */
+
+/* back to top icon */
+#back-to-top{
+    background-color: #c9c1ac;
+    border-radius: 10px;
+    display: inline-block;
+}
+.scrollTop{
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+}
